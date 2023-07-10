@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav/Nav";
+import NoCard from "@/components/Nocard/NoCard";
 import Card from "@/components/card/card";
 import Image from "next/image";
 import Link from "next/link";
@@ -92,6 +93,7 @@ export default function Dashboard() {
 
         {/* cards */}
         <Card />
+        <NoCard />
         {/* end of cards */}
         <section className="bg-gray-50 w-full hidden md:flex lg:hidden">
           <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
