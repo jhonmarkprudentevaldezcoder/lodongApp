@@ -6,12 +6,13 @@ import Link from "next/link";
 import { AiOutlineDown } from "react-icons/ai";
 export default function Dashboard() {
   return (
-    <div className="flex flex-col md:flex-row font-spoqahansansneo ">
+    <div className="flex flex-row md:flex-row font-spoqahansansneo ">
       {/* side navigation  */}
       <Nav />
+      {/* end of side bar */}
 
       {/* list */}
-      <main className="p-5 md:w-4/5 lg:w-1/2">
+      <main className="p-5 md:w-4/5 lg:w-3/5">
         <div className="p-5 mt-2">
           <h2 className="hidden md:block text-black font-spoqahansansneo text-2xl font-bold leading-normal">
             연락처 리스트
@@ -193,21 +194,19 @@ export default function Dashboard() {
           </div>
         </section>
       </main>
+      {/* end of list section */}
 
       {/* detail section */}
-      <aside className="bg-gray-200 md:hidden lg:flex lg:w-1/3 h-screen">
+      <aside className="bg-gray-200 md:hidden w-full lg:flex lg:w-1/4">
         <section className="bg-gray-50 w-full">
-          <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
-            <Link
-              href={"/login"}
-              className="flex flex-col text-center items-center mb-6  "
-            >
+          <div className="flex flex-col  items-center mx-auto md:h-screen ">
+            <div className="flex flex-col text-center items-center mb-6  ">
               <Image
                 className="w-100 h-100 mb-2"
                 src={"/images/Ellipse.png"}
                 alt="logo"
-                width={100}
-                height={100}
+                width={145}
+                height={145}
               />
               <p className="text-md font-semibold text-gray-900">
                 이름을 입력해 주세요.
@@ -216,9 +215,9 @@ export default function Dashboard() {
                 {" "}
                 최근 수정일 2023-07-07 | 최근 수정일 2023-07-07
               </p>
-            </Link>
-            <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
-              <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+            </div>
+            <div className="w-full bg-white rounded-lg  md:mt-0 sm:max-w-md xl:p-0  ">
+              <div className=" space-y-4 md:space-y-6 sm:p-8">
                 <form className="space-y-4 md:space-y-6" action="#">
                   <div>
                     <label
@@ -294,6 +293,7 @@ export default function Dashboard() {
           </div>
         </section>
       </aside>
+
       {/* end of detail section */}
     </div>
   );

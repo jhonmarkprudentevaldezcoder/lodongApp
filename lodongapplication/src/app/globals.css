@@ -12,3 +12,7 @@
   color: transparent;
   background-image: linear-gradient(to right, #4DD399, #0EB2A6);
 }
+
+div{
+  border:  1px solid green;
+}
