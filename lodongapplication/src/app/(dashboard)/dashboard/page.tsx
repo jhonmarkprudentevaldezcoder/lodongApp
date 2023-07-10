@@ -196,7 +196,7 @@ export default function Dashboard() {
       {/* end of list section */}
 
       {/* detail section */}
-      <aside className="bg-gray-200 hidden w-full lg:flex lg:w-2/5 ">
+      <aside className="bg-gray-200 mt-10 hidden w-full lg:flex lg:w-2/5 ">
         <section className="bg-gray-50 w-full">
           <div className="flex flex-col  items-center mx-auto md:h-screen ">
             <div className="flex flex-col p-5 text-center items-center mb-6  ">
