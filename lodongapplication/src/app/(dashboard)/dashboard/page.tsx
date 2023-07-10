@@ -194,6 +194,8 @@ export default function Dashboard() {
 
         {/* cards */}
         <Card />
+        <Card />
+
         <NoCard />
         {/* end of cards */}
         <section className="bg-gray-50 w-full mt-20   lg:hidden">
