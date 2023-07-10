@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Nav() {
   return (
@@ -15,6 +16,21 @@ export default function Nav() {
             src={"/images/mainfolder.png"}
           />
           <p className="text-sm font-bold">연락처 전체보기</p>
+        </div>
+        <div className="mt-5 ml-5">
+          <ul>
+            <li>
+              <span className="flex flex-row gap-4">
+                <Image
+                  src={"/images/folder.png"}
+                  width={20}
+                  height={20}
+                  alt="folder"
+                />
+                <p>폴더1</p>
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </aside>
