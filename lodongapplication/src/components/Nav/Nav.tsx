@@ -1,14 +1,45 @@
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 export default function Nav() {
   return (
     <aside className="md:w-1/5 lg:w-1/6">
       <div className="flex flex-col p-5 border border-e-gray-300 md:h-full">
-        <div className="font-montserrat text-2xl font-bold leading-normal uppercase p-5 text-gradient-green-blue">
+        <motion.div
+          initial={{
+            x: -500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          className="font-montserrat text-2xl font-bold leading-normal uppercase p-5 text-gradient-green-blue"
+        >
           APP TITLE
-        </div>
-        <div className="md:flex flex-row lg:flex-row md:flex-col items-center gap-2 mt-5 hidden ">
+        </motion.div>
+        <motion.div
+          initial={{
+            x: -100,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          className="md:flex flex-row lg:flex-row md:flex-col items-center gap-2 mt-5 hidden "
+        >
           <Image
             alt="folder"
             width={20}
@@ -18,10 +49,24 @@ export default function Nav() {
           <p className="text-sm font-bold flex flex-row gap-10  ">
             연락처 전체보기 <AiOutlineRight />
           </p>
-        </div>
+        </motion.div>
         <div className="mt-5 ml-5">
           <ul>
-            <li>
+            <motion.li
+              initial={{
+                x: 200,
+                opacity: 0,
+                scale: 0.5,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 1.5,
+              }}
+            >
               <span className="flex flex-row gap-4">
                 <Image
                   src={"/images/folder.png"}
@@ -31,11 +76,26 @@ export default function Nav() {
                 />
                 <p>폴더1</p>
               </span>
-            </li>
+            </motion.li>
           </ul>
-          <span className="hidden md:block text-[#D1D1D1] text-sm mt-5 hover:cursor-pointer hover:text-[#494848] transition ease-in-out delay-100 duration-200">
+          <motion.span
+            initial={{
+              y: 200,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className="hidden md:block text-[#D1D1D1] text-sm mt-5 hover:cursor-pointer hover:text-[#494848] transition ease-in-out delay-100 duration-200"
+          >
             + 새 폴더 만들기
-          </span>
+          </motion.span>
         </div>
       </div>
     </aside>

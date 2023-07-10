@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
+import { motion } from "framer-motion";
+
 export default function Dashboard() {
   const [showDropDown, setShowDropDown] = useState(false);
   return (
@@ -17,15 +19,48 @@ export default function Dashboard() {
       {/* list */}
       <main className="p-5 md:w-4/5 lg:w-3/5">
         <div className="p-5 mt-2">
-          <h2 className="hidden md:block text-black font-spoqahansansneo text-2xl font-bold leading-normal">
+          <motion.h2
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 2.5,
+            }}
+            className="hidden md:block text-black font-spoqahansansneo text-2xl font-bold leading-normal"
+          >
             연락처 리스트
-          </h2>
+          </motion.h2>
           <div className="mt-5">
-            <p className="text-black font-spoqahansansneo text-base  font-normal leading-6">
+            <motion.p
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.4,
+              }}
+              className="text-black font-spoqahansansneo text-base  font-normal leading-6"
+            >
               지금 <span className="text-[#4DD399] font-bold">83명의</span>
               연락처와
-            </p>
-            <div className="flex flex-row justify-between mt-2">
+            </motion.p>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.1,
+              }}
+              className="flex flex-row justify-between mt-2"
+            >
               <span>
                 <Link
                   href={"#"}
@@ -35,14 +70,36 @@ export default function Dashboard() {
                 </Link>{" "}
                 의 메모가 있어요.
               </span>
-              <span className="hidden md:block text-[#4DD399]  font-bold">
+              <motion.span
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1.1,
+                }}
+                className="hidden md:block text-[#4DD399]  font-bold"
+              >
                 + 새 연락처 추가
-              </span>
-            </div>
+              </motion.span>
+            </motion.div>
           </div>
 
           <div>
-            <form className="mt-4">
+            <motion.form
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.5,
+              }}
+              className="mt-4"
+            >
               <label
                 htmlFor="default-search"
                 className="mb-2 text-sm font-medium text-gray-900 sr-only "
@@ -74,11 +131,22 @@ export default function Dashboard() {
                   </svg>
                 </div>
               </div>
-            </form>
+            </motion.form>
           </div>
         </div>
 
-        <div className="relative flex justify-end">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          className="relative flex justify-end"
+        >
           {/* Dropdown toggle button */}
           <button
             onClick={() => {
@@ -121,7 +189,7 @@ export default function Dashboard() {
               </li>
             </ul>
           </div>
-        </div>
+        </motion.div>
 
         {/* cards */}
         <Card />

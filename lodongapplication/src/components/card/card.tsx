@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import { AiOutlineRight } from "react-icons/ai";
 export default function Card() {
@@ -12,18 +13,40 @@ export default function Card() {
           width={100}
           height={100}
         />
-        <div className="flex flex-col gap-1">
-          <p className="text-sm  text-gray-900 truncate font-bold">이름</p>
-          <p className="text-sm text-gray-500 truncate dark:text-gray-400 font-bold">
+        <motion.div>
+          <motion.p
+            initial={{ y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.1 }}
+            className="text-sm  text-gray-900 truncate font-bold"
+          >
+            이름
+          </motion.p>
+          <motion.p
+            initial={{ y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="text-sm text-gray-500 truncate dark:text-gray-400 font-bold"
+          >
             전화번호 직접입력or 불러오기
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="text-sm  text-gray-900 truncate font-bold">
+        <motion.div
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-sm  text-gray-900 truncate font-bold"
+        >
           010 1111 1111
-        </div>
+        </motion.div>
         <div className="text-sm  text-gray-900 truncate font-bold md:hidden lg:flex">
-          <ul className="flex flex-row justify-between gap-4 items-center">
+          <motion.ul
+            initial={{ y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.4 }}
+            className="flex flex-row justify-between gap-4 items-center"
+          >
             <li className="bg-[#4DD39926] text-[#4DD399] p-2">
               <span>직장동료</span>
             </li>
@@ -36,14 +59,24 @@ export default function Card() {
             <li className="bg-[#4DD39926] text-[#4DD399] p-2">
               <span>...</span>
             </li>
-          </ul>
+          </motion.ul>
         </div>
-        <div className="text-sm  text-gray-900 truncate font-bold">
+        <motion.div
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="text-sm  text-gray-900 truncate font-bold"
+        >
           23-07-05
-        </div>
-        <div className="text-sm  text-gray-900 truncate font-bold">
+        </motion.div>
+        <motion.div
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.4 }}
+          className="text-sm  text-gray-900 truncate font-bold"
+        >
           <AiOutlineRight className="hover:cursor-pointer" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
