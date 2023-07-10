@@ -4,7 +4,7 @@ import { AiOutlineRight } from "react-icons/ai";
 export default function Nav() {
   return (
     <aside className="md:w-1/5 lg:w-1/6">
-      <div className="flex flex-col p-5 border border-e-gray-300 md:h-screen">
+      <div className="flex flex-col p-5 border border-e-gray-300 md:h-full">
         <div className="font-montserrat text-2xl font-bold leading-normal uppercase p-5 text-gradient-green-blue">
           APP TITLE
         </div>

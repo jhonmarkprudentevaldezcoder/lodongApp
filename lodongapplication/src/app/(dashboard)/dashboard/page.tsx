@@ -96,7 +96,7 @@ export default function Dashboard() {
         <Card />
         <NoCard />
         {/* end of cards */}
-        <section className="bg-gray-50 w-full mt-20  md:flex lg:hidden">
+        <section className="bg-gray-50 w-full mt-20   lg:hidden">
           <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
             <Link
               href={"/login"}
@@ -113,11 +113,10 @@ export default function Dashboard() {
                 이름을 입력해 주세요.
               </p>
               <p className="text-sm text-gray-500">
-                {" "}
                 최근 수정일 2023-07-07 | 최근 수정일 2023-07-07
               </p>
             </Link>
-            <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
+            <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-full xl:p-0  ">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <form className="space-y-4 md:space-y-6" action="#">
                   <div>
