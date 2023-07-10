@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <aside>
-      <div className="flex flex-col p-5 border border-e-gray-300">
+      <div className="flex flex-col p-5 border border-e-gray-300 md:h-screen">
         <div className="font-montserrat text-2xl font-bold leading-normal uppercase p-5">
           APP TITLE
         </div>
