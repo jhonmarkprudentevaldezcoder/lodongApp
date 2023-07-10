@@ -2,7 +2,7 @@ import Nav from "@/components/Nav/Nav";
 import Card from "@/components/card/card";
 import Image from "next/image";
 import Link from "next/link";
-
+import { AiOutlineDown } from "react-icons/ai";
 export default function Dashboard() {
   return (
     <div className="flex flex-col md:flex-row font-spoqahansansneo ">
@@ -10,7 +10,7 @@ export default function Dashboard() {
       <Nav />
 
       {/* list */}
-      <main className="p-5 md:w-1/2">
+      <main className="p-5 md:w-4/5 lg:w-1/2">
         <div className="p-5 mt-2">
           <h2 className="hidden md:block text-black font-spoqahansansneo text-2xl font-bold leading-normal">
             연락처 리스트
@@ -61,9 +61,9 @@ export default function Dashboard() {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                     />
                   </svg>
@@ -72,30 +72,47 @@ export default function Dashboard() {
             </form>
           </div>
         </div>
-        {/* end of list  */}
+
+        <div className="relative flex justify-end">
+          {/* Dropdown toggle button */}
+          <button className="px-4 py-2 flex  flex-row gap-3 items-center border border-gray-300 text-sm text-gray-800 rounded-md focus:outline-none">
+            최근 수정일 순 <AiOutlineDown />
+          </button>
+
+          {/*  Dropdown content */}
+          <div className="absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-lg hidden">
+            <ul className="py-2">
+              {/* Dropdown items */}
+              <li className="px-4 py-2 hover:bg-gray-100">Dropdown Item 1</li>
+              <li className="px-4 py-2 hover:bg-gray-100">Dropdown Item 2</li>
+              <li className="px-4 py-2 hover:bg-gray-100">Dropdown Item 3</li>
+            </ul>
+          </div>
+        </div>
 
         {/* cards */}
         <Card />
         {/* end of cards */}
-      </main>
-
-      {/* detail section */}
-      <aside className="bg-gray-200  md:w-1/3">
-        {" "}
-        <section className="bg-gray-50 w-full">
-          <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <section className="bg-gray-50 w-full hidden md:flex lg:hidden">
+          <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
             <Link
               href={"/login"}
-              className="flex flex-col text-center items-center mb-6 text-2xl font-semibold text-gray-900 "
+              className="flex flex-col text-center items-center mb-6  "
             >
               <Image
-                className="w-8 h-8 ml-2"
-                src={"/images/applogo.png"}
+                className="w-100 h-100 mb-2"
+                src={"/images/Ellipse.png"}
                 alt="logo"
                 width={100}
                 height={100}
               />
-              로그인
+              <p className="text-md font-semibold text-gray-900">
+                이름을 입력해 주세요.
+              </p>
+              <p className="text-sm text-gray-500">
+                {" "}
+                최근 수정일 2023-07-07 | 최근 수정일 2023-07-07
+              </p>
             </Link>
             <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -105,14 +122,14 @@ export default function Dashboard() {
                       htmlFor="email"
                       className="block mb-2 text-sm font-medium text-gray-900 "
                     >
-                      이메일
+                      전화번호
                     </label>
                     <input
                       type="email"
                       name="email"
                       id="email"
                       className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                      placeholder="이메일(아이디)을 입력해 주세요."
+                      placeholder="전화번호를 입력해 주세요."
                       required
                     />
                   </div>
@@ -121,42 +138,154 @@ export default function Dashboard() {
                       htmlFor="password"
                       className="block mb-2 text-sm font-medium text-gray-900 "
                     >
-                      비밀번호
+                      태그
                     </label>
                     <input
                       type="password"
                       name="password"
                       id="password"
-                      placeholder="비밀번호를 입력해 주세요"
+                      placeholder="#을 제외하고 입력해 주세요."
                       className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                       required
                     />
                   </div>
 
-                  <button className="w-full text-white bg-[#4dd399] hover:bg-primary-700 p-2 rounded-sm">
-                    로그인
-                  </button>
-                  <div className="items-center">
-                    <div className="flex">
-                      <div className="flex items-center h-5">
-                        <input
-                          id="remember"
-                          aria-describedby="remember"
-                          type="checkbox"
-                          className="w-4 h-4 border border-gray-300  hover:cursor-pointer rounded  focus:[#4dd399] bg-[#4dd399] focus:ring-[#4dd399] "
-                          required
-                        />
-                      </div>
-                      <div className="ml-3 text-sm">
-                        <label htmlFor="remember" className="text-gray-500 ">
-                          자동 로그인
-                        </label>
-                      </div>
-                    </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      한줄메모
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                      placeholder="연락처 리스트에 나타날 짧은 메모를 등록해 보세요."
+                      required
+                    />
                   </div>
-                  <p className="text-sm font-light text-center text-gray-500 ">
-                    아이디 · 비밀번호 찾기
-                  </p>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      메모
+                    </label>
+                    <textarea
+                      name="email"
+                      id="email"
+                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-5"
+                      placeholder="‘성이름’ 님과의 약속, 일정관리 등 자세한 메모가 가능해요."
+                      required
+                    />
+                  </div>
+                  <button className="w-full text-white bg-[#4dd399] hover:bg-primary-700 p-2 rounded-sm">
+                    저장
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* detail section */}
+      <aside className="bg-gray-200 md:hidden lg:flex lg:w-1/3 h-screen">
+        <section className="bg-gray-50 w-full">
+          <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
+            <Link
+              href={"/login"}
+              className="flex flex-col text-center items-center mb-6  "
+            >
+              <Image
+                className="w-100 h-100 mb-2"
+                src={"/images/Ellipse.png"}
+                alt="logo"
+                width={100}
+                height={100}
+              />
+              <p className="text-md font-semibold text-gray-900">
+                이름을 입력해 주세요.
+              </p>
+              <p className="text-sm text-gray-500">
+                {" "}
+                최근 수정일 2023-07-07 | 최근 수정일 2023-07-07
+              </p>
+            </Link>
+            <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
+              <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <form className="space-y-4 md:space-y-6" action="#">
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      전화번호
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                      placeholder="전화번호를 입력해 주세요."
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="password"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      태그
+                    </label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="#을 제외하고 입력해 주세요."
+                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      한줄메모
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                      placeholder="연락처 리스트에 나타날 짧은 메모를 등록해 보세요."
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                      메모
+                    </label>
+                    <textarea
+                      name="email"
+                      id="email"
+                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-5"
+                      placeholder="‘성이름’ 님과의 약속, 일정관리 등 자세한 메모가 가능해요."
+                      required
+                    />
+                  </div>
+                  <button className="w-full text-white bg-[#4dd399] hover:bg-primary-700 p-2 rounded-sm">
+                    저장
+                  </button>
                 </form>
               </div>
             </div>

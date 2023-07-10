@@ -5,7 +5,7 @@ export default function Nav() {
   return (
     <aside>
       <div className="flex flex-col p-5 border border-e-gray-300 md:h-screen">
-        <div className="font-montserrat text-2xl font-bold leading-normal uppercase p-5  text-gradient-green-blue">
+        <div className="font-montserrat text-2xl font-bold leading-normal uppercase p-5 text-gradient-green-blue">
           APP TITLE
         </div>
         <div className="md:flex flex-row gap-2 mt-5 hidden ">
