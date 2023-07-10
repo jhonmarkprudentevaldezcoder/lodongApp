@@ -197,7 +197,7 @@ export default function Dashboard() {
       {/* end of list section */}
 
       {/* detail section */}
-      <aside className="bg-gray-200 hidden w-full lg:flex lg:w-1/4 ">
+      <aside className="bg-gray-200 hidden w-full lg:flex lg:w-2/5 ">
         <section className="bg-gray-50 w-full">
           <div className="flex flex-col  items-center mx-auto md:h-screen ">
             <div className="flex flex-col p-5 text-center items-center mb-6  ">
@@ -216,13 +216,13 @@ export default function Dashboard() {
                 최근 수정일 2023-07-07 | 최근 수정일 2023-07-07
               </p>
             </div>
-            <div className="w-full bg-white rounded-lg  md:mt-0 sm:max-w-md xl:p-0  ">
+            <div className="w-full bg-white rounded-lg  md:mt-0 sm:max-w-full xl:p-0  ">
               <div className=" space-y-4 md:space-y-6 sm:p-8">
                 <form className="space-y-4 md:space-y-6" action="#">
                   <div>
                     <label
                       htmlFor="email"
-                      className="block mb-2 text-sm font-medium text-gray-900 "
+                      className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       전화번호
                     </label>
@@ -230,7 +230,7 @@ export default function Dashboard() {
                       type="email"
                       name="email"
                       id="email"
-                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                      className="bg-gray-50 pl-5 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                       placeholder="전화번호를 입력해 주세요."
                       required
                     />
@@ -238,7 +238,7 @@ export default function Dashboard() {
                   <div>
                     <label
                       htmlFor="password"
-                      className="block mb-2 text-sm font-medium text-gray-900 "
+                      className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       태그
                     </label>
@@ -247,7 +247,7 @@ export default function Dashboard() {
                       name="password"
                       id="password"
                       placeholder="#을 제외하고 입력해 주세요."
-                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                      className="bg-gray-50 pl-5 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                       required
                     />
                   </div>
@@ -255,7 +255,7 @@ export default function Dashboard() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block mb-2 text-sm font-medium text-gray-900 "
+                      className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       한줄메모
                     </label>
@@ -263,7 +263,7 @@ export default function Dashboard() {
                       type="email"
                       name="email"
                       id="email"
-                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                      className="bg-gray-50 pl-5 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                       placeholder="연락처 리스트에 나타날 짧은 메모를 등록해 보세요."
                       required
                     />
@@ -272,14 +272,14 @@ export default function Dashboard() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block mb-2 text-sm font-medium text-gray-900 "
+                      className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       메모
                     </label>
                     <textarea
-                      name="email"
-                      id="email"
-                      className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-5"
+                      name="memo"
+                      id="memo"
+                      className="bg-gray-50 pl-5  h-40 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-5"
                       placeholder="‘성이름’ 님과의 약속, 일정관리 등 자세한 메모가 가능해요."
                       required
                     />
