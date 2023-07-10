@@ -63,20 +63,17 @@ export default function Login() {
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full text-white bg-[#4dd399] hover:bg-primary-700 p-2 rounded-sm"
-                  >
+                  <button className="w-full text-white bg-[#4dd399] hover:bg-primary-700 p-2 rounded-sm">
                     로그인
                   </button>
-                  <div className=" items-center ">
+                  <div className="items-center">
                     <div className="flex">
                       <div className="flex items-center h-5">
                         <input
                           id="remember"
                           aria-describedby="remember"
                           type="checkbox"
-                          className="w-4 h-4 border border-gray-300 hover:cursor-pointer rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 "
+                          className="w-4 h-4 border border-gray-300  hover:cursor-pointer rounded  focus:[#4dd399] bg-[#4dd399] focus:ring-[#4dd399] "
                           required
                         />
                       </div>
