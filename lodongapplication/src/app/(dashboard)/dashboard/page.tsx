@@ -8,7 +8,7 @@ export default function Dashboard() {
       {/* side navigation  */}
       <Nav />
       {/* detail */}
-      <main className="p-2">
+      <main className="p-5">
         <div>
           <h2 className="hidden md:block text-black font-spoqahansansneo text-2xl font-bold leading-normal">
             연락처 리스트
