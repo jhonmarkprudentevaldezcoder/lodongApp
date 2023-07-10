@@ -31,6 +31,9 @@ export default function Nav() {
               </span>
             </li>
           </ul>
+          <span className="hidden md:block text-[#D1D1D1] text-sm mt-5 hover:cursor-pointer hover:text-[#494848] transition ease-in-out delay-100 duration-200">
+            + 새 폴더 만들기
+          </span>
         </div>
       </div>
     </aside>
