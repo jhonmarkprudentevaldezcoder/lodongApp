@@ -46,7 +46,7 @@ export default function Dashboard() {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
+                  className="block w-full p-4 pl-10 text-sm text-gray-900  rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
                   required
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
