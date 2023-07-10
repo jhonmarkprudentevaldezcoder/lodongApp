@@ -9,7 +9,7 @@ export default function Dashboard() {
       <Nav />
       {/* detail */}
       <main className="p-5">
-        <div>
+        <div className="p-5 mt-2">
           <h2 className="hidden md:block text-black font-spoqahansansneo text-2xl font-bold leading-normal">
             연락처 리스트
           </h2>
