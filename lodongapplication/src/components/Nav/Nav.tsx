@@ -72,6 +72,7 @@ export default function Nav() {
                   src={"/images/folder.png"}
                   width={20}
                   height={20}
+                  className="folder"
                   alt="folder"
                 />
                 <p>폴더1</p>

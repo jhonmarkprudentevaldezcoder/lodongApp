@@ -4,12 +4,13 @@ import NoCard from "@/components/Nocard/NoCard";
 import Card from "@/components/card/card";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 export default function Dashboard() {
   const [showDropDown, setShowDropDown] = useState(false);
+
   return (
     <div className="flex flex-col md:flex-row font-spoqahansansneo ">
       {/* side navigation  */}
@@ -220,15 +221,15 @@ export default function Dashboard() {
                 <form className="space-y-4 md:space-y-6" action="#">
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="a"
                       className="block mb-2 text-sm font-medium text-gray-900 "
                     >
                       전화번호
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
+                      type="text"
+                      name="a"
+                      id="a"
                       className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                       placeholder="전화번호를 입력해 주세요."
                       required
@@ -236,15 +237,15 @@ export default function Dashboard() {
                   </div>
                   <div>
                     <label
-                      htmlFor="password"
+                      htmlFor="b"
                       className="block mb-2 text-sm font-medium text-gray-900 "
                     >
                       태그
                     </label>
                     <input
-                      type="password"
-                      name="password"
-                      id="password"
+                      type="text"
+                      name="b"
+                      id="b"
                       placeholder="#을 제외하고 입력해 주세요."
                       className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                       required
@@ -253,15 +254,15 @@ export default function Dashboard() {
 
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="c"
                       className="block mb-2 text-sm font-medium text-gray-900 "
                     >
                       한줄메모
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
+                      type="text"
+                      name="c"
+                      id="c"
                       className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                       placeholder="연락처 리스트에 나타날 짧은 메모를 등록해 보세요."
                       required
@@ -270,14 +271,14 @@ export default function Dashboard() {
 
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="d"
                       className="block mb-2 text-sm font-medium text-gray-900 "
                     >
                       메모
                     </label>
                     <textarea
-                      name="email"
-                      id="email"
+                      name="text"
+                      id="d"
                       className="bg-gray-50 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-5"
                       placeholder="‘성이름’ 님과의 약속, 일정관리 등 자세한 메모가 가능해요."
                       required
@@ -319,15 +320,15 @@ export default function Dashboard() {
                 <form className="space-y-4 md:space-y-6" action="#">
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="a"
                       className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       전화번호
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
+                      type="text"
+                      name="a"
+                      id="a"
                       className="bg-gray-50 pl-5 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                       placeholder="전화번호를 입력해 주세요."
                       required
@@ -335,15 +336,15 @@ export default function Dashboard() {
                   </div>
                   <div>
                     <label
-                      htmlFor="password"
+                      htmlFor="b"
                       className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       태그
                     </label>
                     <input
-                      type="password"
-                      name="password"
-                      id="password"
+                      type="text"
+                      name="b"
+                      id="b"
                       placeholder="#을 제외하고 입력해 주세요."
                       className="bg-gray-50 pl-5 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                       required
@@ -352,15 +353,15 @@ export default function Dashboard() {
 
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="c"
                       className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       한줄메모
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
+                      type="text"
+                      name="c"
+                      id="c"
                       className="bg-gray-50 pl-5 border border-none text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                       placeholder="연락처 리스트에 나타날 짧은 메모를 등록해 보세요."
                       required
@@ -369,7 +370,7 @@ export default function Dashboard() {
 
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="memo"
                       className="block mb-2 text-md font-bold text-gray-900 "
                     >
                       메모
