@@ -14,10 +14,7 @@ export default function Login() {
       <div className="flex md:flex-row  flex-col">
         <section className="bg-gray-50  md:w-5/12">
           <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <Link
-              href={"/login"}
-              className="flex flex-col text-center items-center mb-6 text-2xl font-semibold text-gray-900 "
-            >
+            <span className="flex flex-col text-center items-center mb-6 text-2xl font-semibold text-gray-900 ">
               <Image
                 className="w-8 h-8 ml-2"
                 src={"/images/applogo.png"}
@@ -26,8 +23,8 @@ export default function Login() {
                 height={100}
               />
               로그인
-            </Link>
-            <div className="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
+            </span>
+            <div className="w-full bg-white rounded-lg   md:mt-0 sm:max-w-md xl:p-0  ">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <form className="space-y-4 md:space-y-6" action="#">
                   <div>

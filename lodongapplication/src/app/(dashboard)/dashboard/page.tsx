@@ -1,10 +1,13 @@
+"use client";
 import Nav from "@/components/Nav/Nav";
 import NoCard from "@/components/Nocard/NoCard";
 import Card from "@/components/card/card";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 export default function Dashboard() {
+  const [showDropDown, setShowDropDown] = useState(false);
   return (
     <div className="flex flex-col md:flex-row font-spoqahansansneo ">
       {/* side navigation  */}
@@ -77,17 +80,45 @@ export default function Dashboard() {
 
         <div className="relative flex justify-end">
           {/* Dropdown toggle button */}
-          <button className="px-4 py-2 flex  flex-row gap-3 items-center border border-gray-300 text-sm text-gray-800 rounded-md focus:outline-none">
+          <button
+            onClick={() => {
+              if (showDropDown) {
+                setShowDropDown(false);
+              } else {
+                setShowDropDown(true);
+              }
+            }}
+            className="px-4 py-2 flex  flex-row gap-3 items-center border border-gray-300 text-sm text-gray-800 rounded-md focus:outline-none"
+          >
             최근 수정일 순 <AiOutlineDown />
           </button>
 
           {/*  Dropdown content */}
-          <div className="absolute right-0 mt-2 bg-white border border-gray-300 rounded-md shadow-lg hidden">
+          <div
+            className={`absolute right-0 mt-10 bg-white border border-gray-300 rounded-md shadow-lg ${
+              showDropDown ? "flex" : "hidden"
+            }`}
+          >
             <ul className="py-2">
               {/* Dropdown items */}
-              <li className="px-4 py-2 hover:bg-gray-100">Dropdown Item 1</li>
-              <li className="px-4 py-2 hover:bg-gray-100">Dropdown Item 2</li>
-              <li className="px-4 py-2 hover:bg-gray-100">Dropdown Item 3</li>
+              <li
+                className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
+                onClick={() => setShowDropDown(false)}
+              >
+                Dropdown Item 1
+              </li>
+              <li
+                className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
+                onClick={() => setShowDropDown(false)}
+              >
+                Dropdown Item 2
+              </li>
+              <li
+                className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer "
+                onClick={() => setShowDropDown(false)}
+              >
+                Dropdown Item 3
+              </li>
             </ul>
           </div>
         </div>
