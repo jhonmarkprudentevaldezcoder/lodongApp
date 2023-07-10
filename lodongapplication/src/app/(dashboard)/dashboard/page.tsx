@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AiOutlineDown } from "react-icons/ai";
 export default function Dashboard() {
   return (
-    <div className="flex flex-row md:flex-row font-spoqahansansneo ">
+    <div className="flex flex-col md:flex-row font-spoqahansansneo ">
       {/* side navigation  */}
       <Nav />
       {/* end of side bar */}
@@ -96,7 +96,7 @@ export default function Dashboard() {
         <Card />
         <NoCard />
         {/* end of cards */}
-        <section className="bg-gray-50 w-full hidden md:flex lg:hidden">
+        <section className="bg-gray-50 w-full mt-20  md:flex lg:hidden">
           <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
             <Link
               href={"/login"}
@@ -197,16 +197,16 @@ export default function Dashboard() {
       {/* end of list section */}
 
       {/* detail section */}
-      <aside className="bg-gray-200 md:hidden w-full lg:flex lg:w-1/4">
+      <aside className="bg-gray-200 hidden w-full lg:flex lg:w-1/4 ">
         <section className="bg-gray-50 w-full">
           <div className="flex flex-col  items-center mx-auto md:h-screen ">
-            <div className="flex flex-col text-center items-center mb-6  ">
+            <div className="flex flex-col p-5 text-center items-center mb-6  ">
               <Image
-                className="w-100 h-100 mb-2"
+                className="w-100 h-100 mb-2 "
                 src={"/images/Ellipse.png"}
                 alt="logo"
-                width={145}
-                height={145}
+                width={140}
+                height={140}
               />
               <p className="text-md font-semibold text-gray-900">
                 이름을 입력해 주세요.
