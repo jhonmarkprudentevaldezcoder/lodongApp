@@ -241,7 +241,18 @@ export default function Dashboard() {
         <NoCard />
         {/* end of cards */}
         <section className="bg-gray-50 w-full mt-20   lg:hidden">
-          <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0"
+          >
             <Link
               href={"/login"}
               className="flex flex-col text-center items-center mb-6  "
@@ -334,7 +345,7 @@ export default function Dashboard() {
                 </form>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </main>
       {/* end of list section */}
@@ -342,7 +353,18 @@ export default function Dashboard() {
       {/* detail section */}
       <aside className="bg-gray-200 mt-10 hidden w-full lg:flex lg:w-2/5 ">
         <section className="bg-gray-50 w-full">
-          <div className="flex flex-col  items-center mx-auto md:h-screen ">
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className="flex flex-col  items-center mx-auto md:h-screen "
+          >
             <div className="flex flex-col p-5 text-center items-center mb-6  ">
               <Image
                 className="w-100 h-100 mb-2 "
@@ -433,7 +455,7 @@ export default function Dashboard() {
                 </form>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </aside>
 
