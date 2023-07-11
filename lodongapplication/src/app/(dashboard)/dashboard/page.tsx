@@ -160,17 +160,18 @@ export default function Dashboard() {
             >
               <li className="bg-[#4DD39926] text-[#4DD399] p-2">
                 <span className="flex flex-row items-center gap-2">
-                  직장동료
-                  <GrFormClose className="hover:cursor-pointer text-2xl text-[#4DD399]" />
+                  직장동료{" "}
+                  <span className="hover:cursor-pointer ml-3 font-normal">
+                    X
+                  </span>
                 </span>
               </li>
               <li className="bg-[#4DD39926] text-[#4DD399] p-2">
                 <span className="flex flex-row items-center gap-2">
-                  직장동료
-                  <GrFormClose
-                    className="hover:cursor-pointer text-2xl text-[#4DD399] "
-                    style={IconStyle}
-                  />
+                  직장동료{" "}
+                  <span className="hover:cursor-pointer ml-3 font-normal">
+                    X
+                  </span>
                 </span>
               </li>
             </motion.ul>
