@@ -6,11 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, ChangeEvent } from "react";
 import { AiOutlineDown } from "react-icons/ai";
+import { GrFormClose } from "react-icons/gr";
 import { motion } from "framer-motion";
 
 export default function Dashboard() {
   const [showDropDown, setShowDropDown] = useState(false);
 
+  const IconStyle = {
+    color: "red",
+  };
   return (
     <div className="flex flex-col md:flex-row font-spoqahansansneo ">
       {/* side navigation  */}
@@ -135,62 +139,99 @@ export default function Dashboard() {
             </motion.form>
           </div>
         </div>
-
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1.5,
-          }}
-          className="relative flex justify-end"
-        >
-          {/* Dropdown toggle button */}
-          <button
-            onClick={() => {
-              if (showDropDown) {
-                setShowDropDown(false);
-              } else {
-                setShowDropDown(true);
-              }
+        <div className="flex flex-row justify-between">
+          <motion.div
+            initial={{
+              opacity: 0,
             }}
-            className="px-4 py-2 flex  flex-row gap-3 items-center border border-gray-300 text-sm text-gray-800 rounded-md focus:outline-none"
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className="relative flex"
           >
-            최근 수정일 순 <AiOutlineDown />
-          </button>
+            <motion.ul
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.4 }}
+              className="flex flex-row justify-between gap-4 items-center"
+            >
+              <li className="bg-[#4DD39926] text-[#4DD399] p-2">
+                <span className="flex flex-row items-center gap-2">
+                  직장동료
+                  <GrFormClose className="hover:cursor-pointer text-2xl text-[#4DD399]" />
+                </span>
+              </li>
+              <li className="bg-[#4DD39926] text-[#4DD399] p-2">
+                <span className="flex flex-row items-center gap-2">
+                  직장동료
+                  <GrFormClose
+                    className="hover:cursor-pointer text-2xl text-[#4DD399] "
+                    style={IconStyle}
+                  />
+                </span>
+              </li>
+            </motion.ul>
+          </motion.div>
 
-          {/*  Dropdown content */}
-          <div
-            className={`absolute right-0 mt-10 bg-white border border-gray-300 rounded-md shadow-lg ${
-              showDropDown ? "flex" : "hidden"
-            }`}
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+            className="relative flex "
           >
-            <ul className="py-2">
-              {/* Dropdown items */}
-              <li
-                className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
-                onClick={() => setShowDropDown(false)}
-              >
-                Dropdown Item 1
-              </li>
-              <li
-                className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
-                onClick={() => setShowDropDown(false)}
-              >
-                Dropdown Item 2
-              </li>
-              <li
-                className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer "
-                onClick={() => setShowDropDown(false)}
-              >
-                Dropdown Item 3
-              </li>
-            </ul>
-          </div>
-        </motion.div>
+            {/* Dropdown toggle button */}
+            <button
+              onClick={() => {
+                if (showDropDown) {
+                  setShowDropDown(false);
+                } else {
+                  setShowDropDown(true);
+                }
+              }}
+              className="px-4 py-2 flex  flex-row gap-3 items-center border border-gray-300 text-sm text-gray-800 rounded-md focus:outline-none"
+            >
+              최근 수정일 순 <AiOutlineDown />
+            </button>
+
+            {/*  Dropdown content */}
+            <div
+              className={`absolute right-0 mt-10 bg-white border border-gray-300 rounded-md shadow-lg ${
+                showDropDown ? "flex" : "hidden"
+              }`}
+            >
+              <ul className="py-2">
+                {/* Dropdown items */}
+                <li
+                  className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
+                  onClick={() => setShowDropDown(false)}
+                >
+                  Dropdown Item 1
+                </li>
+                <li
+                  className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
+                  onClick={() => setShowDropDown(false)}
+                >
+                  Dropdown Item 2
+                </li>
+                <li
+                  className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer "
+                  onClick={() => setShowDropDown(false)}
+                >
+                  Dropdown Item 3
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
 
         {/* cards */}
         <Card />
