@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { AiOutlineRight } from "react-icons/ai";
+import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Nav() {
+  const [showFolder, setShowFolder] = useState(false);
   return (
     <aside className="md:w-1/5 lg:w-1/6">
       <div className="flex flex-col p-5 border border-e-gray-300 md:h-full">
@@ -47,10 +49,33 @@ export default function Nav() {
             src={"/images/mainfolder.png"}
           />
           <p className="text-sm font-bold flex flex-row gap-10  ">
-            연락처 전체보기 <AiOutlineRight />
+            연락처 전체보기{" "}
+            {showFolder ? (
+              <AiOutlineRight
+                className="hover:cursor-pointer"
+                onClick={() => {
+                  if (showFolder) {
+                    setShowFolder(false);
+                  } else {
+                    setShowFolder(true);
+                  }
+                }}
+              />
+            ) : (
+              <AiOutlineDown
+                className="hover:cursor-pointer"
+                onClick={() => {
+                  if (showFolder) {
+                    setShowFolder(false);
+                  } else {
+                    setShowFolder(true);
+                  }
+                }}
+              />
+            )}
           </p>
         </motion.div>
-        <div className="mt-5 ml-5">
+        <div className={`mt-5 ml-5 ${showFolder ? "" : "hidden"}`}>
           <ul>
             <motion.li
               initial={{

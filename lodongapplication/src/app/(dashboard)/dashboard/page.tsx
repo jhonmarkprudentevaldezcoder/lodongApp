@@ -214,19 +214,19 @@ export default function Dashboard() {
                   className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
                   onClick={() => setShowDropDown(false)}
                 >
-                  Dropdown Item 1
+                  Dropdown Item
                 </li>
                 <li
                   className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
                   onClick={() => setShowDropDown(false)}
                 >
-                  Dropdown Item 2
+                  Dropdown Item
                 </li>
                 <li
                   className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer "
                   onClick={() => setShowDropDown(false)}
                 >
-                  Dropdown Item 3
+                  Dropdown Item
                 </li>
               </ul>
             </div>
