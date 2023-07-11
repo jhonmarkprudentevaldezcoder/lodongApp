@@ -215,19 +215,19 @@ export default function Dashboard() {
                   className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
                   onClick={() => setShowDropDown(false)}
                 >
-                  Dropdown Item
+                  최근 수정일 순
                 </li>
                 <li
                   className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer"
                   onClick={() => setShowDropDown(false)}
                 >
-                  Dropdown Item
+                  등록일 순
                 </li>
                 <li
                   className="px-4 py-2 hover:bg-gray-200 hover:cursor-pointer "
                   onClick={() => setShowDropDown(false)}
                 >
-                  Dropdown Item
+                  가나다 순
                 </li>
               </ul>
             </div>
