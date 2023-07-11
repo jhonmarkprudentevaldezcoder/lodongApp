@@ -75,8 +75,8 @@ export default function Nav() {
             )}
           </p>
         </motion.div>
-        <div className={`mt-5 ml-5 ${showFolder ? "" : "hidden"}`}>
-          <ul>
+        <div className={`mt-5 ml-5`}>
+          <ul className={`${showFolder ? "" : "hidden"}`}>
             <motion.li
               initial={{
                 x: 200,
